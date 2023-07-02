@@ -64,7 +64,10 @@ namespace aki_lua87.AnimationUtils
             onTransition.canTransitionToSelf = false;
             offTransition.duration = 0.0f;
             offTransition.canTransitionToSelf = false;
-
+            // StateのWrite DefaultsをOFFにする
+            onState.writeDefaultValues = false;
+            offState.writeDefaultValues = false;
+            
             // VRCExpressionsMenu作成
             VRCExpressionsMenu exMenu = ScriptableObject.CreateInstance<VRCExpressionsMenu>();
             var control = new VRCExpressionsMenu.Control();
